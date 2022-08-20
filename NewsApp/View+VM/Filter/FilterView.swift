@@ -58,10 +58,10 @@ struct FilterView: View {
                     
                     LazyVGrid(columns: columnsForCategory, alignment: .leading, spacing: 5) {
                         ForEach(vm.categories, id: \.id) { item in
-                            FilterContentCardView(name: item.name)
+                            FilterContentCardView(filter: item)
                         }
                     }
-                  
+                    
                     //MARK: - Country
                     HStack{
                         Text("Country")
@@ -72,11 +72,11 @@ struct FilterView: View {
                     .padding(.bottom, 8)
                     
                     LazyVGrid(columns: columnsForCountriesNLanguage, alignment: .leading, spacing: 5) {
-                        ForEach(vm.countries, id: \.self) { item in
-                            FilterContentCardView(name: item)
+                        ForEach(vm.countries, id: \.id) { item in
+                            FilterContentCardView(filter:  item)
                         }
                     }
-                    
+                
                     //MARK: - Language
                     HStack{
                         Text("Language")
@@ -87,8 +87,8 @@ struct FilterView: View {
                     .padding(.bottom, 8)
                     
                     LazyVGrid(columns: columnsForCountriesNLanguage, alignment: .leading, spacing: 5) {
-                        ForEach(vm.language, id: \.self) { item in
-                            FilterContentCardView(name: item)
+                        ForEach(vm.language, id: \.id) { item in
+                            FilterContentCardView(filter:  item)
                         }
                     }
                     .padding(.bottom, 32)

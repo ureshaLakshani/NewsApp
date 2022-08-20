@@ -10,33 +10,37 @@ import SwiftUI
 struct FilterContentCardView: View {
     
     // MARK: - PROPERTIES
-    var name : String = "Sample"
+    var filter : Filter
+    var selectedAction: (() -> ())?
     
     // MARK: - BODY
     var body: some View {
         VStack{
-            
             Button {
-                
+                selectedAction?()
             } label: {
-                Text(name)
-                    .foregroundColor(.black)
+                Text(filter.name)
+                    .foregroundColor( filter.isSelected ? .white : .black)
                     .font(.custom(.NunitoSemibold, 12))
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(.gray, lineWidth: 1)
+                    .background(
+                        ZStack{
+                            filter.isSelected ? Color("Primary") : Color.white
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke( filter.isSelected ? .red : .gray, lineWidth: 1)
+                            
+                        }
+                            .cornerRadius(6)
                     )
             }
         }
     }
 }
 
-// MARK: - PREVIEW
 struct FilterContentCardView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterContentCardView()
+        FilterContentCardView(filter: Filter(id: UUID(), name: "Sample", isSelected: false))
             .previewLayout(.sizeThatFits)
     }
 }
