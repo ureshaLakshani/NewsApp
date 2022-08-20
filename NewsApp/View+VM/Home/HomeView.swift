@@ -31,6 +31,12 @@ struct HomeView: View {
                     } label: {
                         Image("search")
                     }
+                    .background(
+                        NavigationLink (
+                            destination: SearchView(),
+                            isActive: $isActiveSearchView,
+                            label: {})
+                    )
 
                 }
                 .padding()

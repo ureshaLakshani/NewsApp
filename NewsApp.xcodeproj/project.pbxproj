@@ -23,6 +23,7 @@
 		09E917D828B12079001EF6CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917D728B12079001EF6CB /* HomeView.swift */; };
 		09E917DE28B12B14001EF6CB /* BreakingNewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917DD28B12B14001EF6CB /* BreakingNewsCardView.swift */; };
 		09E917E028B1302F001EF6CB /* TopNewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917DF28B1302F001EF6CB /* TopNewsCardView.swift */; };
+		09E917E428B14973001EF6CB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917E328B14973001EF6CB /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		09E917D728B12079001EF6CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		09E917DD28B12B14001EF6CB /* BreakingNewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingNewsCardView.swift; sourceTree = "<group>"; };
 		09E917DF28B1302F001EF6CB /* TopNewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsCardView.swift; sourceTree = "<group>"; };
+		09E917E328B14973001EF6CB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 		09E917C028B1168C001EF6CB /* View+VM */ = {
 			isa = PBXGroup;
 			children = (
-				09E917D728B12079001EF6CB /* HomeView.swift */,
+				09E917E228B14931001EF6CB /* Search */,
+				09E917E128B14925001EF6CB /* Home */,
 			);
 			path = "View+VM";
 			sourceTree = "<group>";
@@ -143,6 +146,22 @@
 				09E917DF28B1302F001EF6CB /* TopNewsCardView.swift */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		09E917E128B14925001EF6CB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				09E917D728B12079001EF6CB /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		09E917E228B14931001EF6CB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				09E917E328B14973001EF6CB /* SearchView.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +245,7 @@
 				09E917D628B11B10001EF6CB /* NewsAppFont.swift in Sources */,
 				09E917E028B1302F001EF6CB /* TopNewsCardView.swift in Sources */,
 				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
+				09E917E428B14973001EF6CB /* SearchView.swift in Sources */,
 				0926FF4128B1121C0023369E /* ContentView.swift in Sources */,
 				0926FF3F28B1121C0023369E /* NewsAppApp.swift in Sources */,
 				09E917DE28B12B14001EF6CB /* BreakingNewsCardView.swift in Sources */,
