@@ -27,6 +27,7 @@
 		09E917E728B14C62001EF6CB /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917E628B14C62001EF6CB /* FilterView.swift */; };
 		09E917E928B15313001EF6CB /* FilterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917E828B15313001EF6CB /* FilterVM.swift */; };
 		09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */; };
+		09E917ED28B161E1001EF6CB /* FilterContentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917EC28B161E1001EF6CB /* FilterContentCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		09E917E628B14C62001EF6CB /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		09E917E828B15313001EF6CB /* FilterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVM.swift; sourceTree = "<group>"; };
 		09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		09E917EC28B161E1001EF6CB /* FilterContentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContentCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				09E917DD28B12B14001EF6CB /* BreakingNewsCardView.swift */,
 				09E917DF28B1302F001EF6CB /* TopNewsCardView.swift */,
+				09E917EC28B161E1001EF6CB /* FilterContentCardView.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E917D628B11B10001EF6CB /* NewsAppFont.swift in Sources */,
+				09E917ED28B161E1001EF6CB /* FilterContentCardView.swift in Sources */,
 				09E917E028B1302F001EF6CB /* TopNewsCardView.swift in Sources */,
 				09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */,
 				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
