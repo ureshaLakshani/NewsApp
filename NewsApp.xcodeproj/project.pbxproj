@@ -21,6 +21,7 @@
 		09E917D328B1185A001EF6CB /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917D228B1185A001EF6CB /* Nunito-Regular.ttf */; };
 		09E917D628B11B10001EF6CB /* NewsAppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917D528B11B10001EF6CB /* NewsAppFont.swift */; };
 		09E917D828B12079001EF6CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917D728B12079001EF6CB /* HomeView.swift */; };
+		09E917DE28B12B14001EF6CB /* BreakingNewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917DD28B12B14001EF6CB /* BreakingNewsCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		09E917D428B11926001EF6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = NewsApp/App/Info.plist; sourceTree = SOURCE_ROOT; };
 		09E917D528B11B10001EF6CB /* NewsAppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppFont.swift; sourceTree = "<group>"; };
 		09E917D728B12079001EF6CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		09E917DD28B12B14001EF6CB /* BreakingNewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingNewsCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				09E917C128B116C9001EF6CB /* App */,
 				09E917C228B11797001EF6CB /* Util */,
+				09E917DC28B12AE0001EF6CB /* CustomComponents */,
 				09E917C028B1168C001EF6CB /* View+VM */,
 				0926FF4428B112250023369E /* Preview Content */,
 			);
@@ -129,6 +132,14 @@
 				09E917D528B11B10001EF6CB /* NewsAppFont.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		09E917DC28B12AE0001EF6CB /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				09E917DD28B12B14001EF6CB /* BreakingNewsCardView.swift */,
+			);
+			path = CustomComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
 				0926FF4128B1121C0023369E /* ContentView.swift in Sources */,
 				0926FF3F28B1121C0023369E /* NewsAppApp.swift in Sources */,
+				09E917DE28B12B14001EF6CB /* BreakingNewsCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
