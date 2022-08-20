@@ -62,6 +62,17 @@ struct HomeView: View {
             .padding(.top, 24)
             .padding(.bottom, 16)
             
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    ForEach(1...10, id: \.self){_ in
+                        BreakingNewsCardView()
+                            .onTapGesture {
+                                isActiveNewsDetailView.toggle()
+                            }
+                    }
+                }
+            }
+            
             //MARK: - TOP NEWS
             HStack{
                 Text("Top News")
@@ -82,7 +93,15 @@ struct HomeView: View {
             }
             .padding(.top, 24)
             .padding(.bottom, 16)
-
+            
+            ScrollView(.vertical, showsIndicators: false){
+                VStack{
+                    ForEach(1...10, id: \.self){_ in
+                        TopNewsCardView()
+                    }
+                }
+            }
+            
             Spacer()
         }
         .navigationBarHidden(true)
