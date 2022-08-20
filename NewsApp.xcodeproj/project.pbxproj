@@ -20,6 +20,7 @@
 		09E917D128B11854001EF6CB /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917CA28B11853001EF6CB /* Nunito-SemiBold.ttf */; };
 		09E917D328B1185A001EF6CB /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917D228B1185A001EF6CB /* Nunito-Regular.ttf */; };
 		09E917D628B11B10001EF6CB /* NewsAppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917D528B11B10001EF6CB /* NewsAppFont.swift */; };
+		09E917D828B12079001EF6CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917D728B12079001EF6CB /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		09E917D228B1185A001EF6CB /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		09E917D428B11926001EF6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = NewsApp/App/Info.plist; sourceTree = SOURCE_ROOT; };
 		09E917D528B11B10001EF6CB /* NewsAppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppFont.swift; sourceTree = "<group>"; };
+		09E917D728B12079001EF6CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		09E917C028B1168C001EF6CB /* View+VM */ = {
 			isa = PBXGroup;
 			children = (
+				09E917D728B12079001EF6CB /* HomeView.swift */,
 			);
 			path = "View+VM";
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E917D628B11B10001EF6CB /* NewsAppFont.swift in Sources */,
+				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
 				0926FF4128B1121C0023369E /* ContentView.swift in Sources */,
 				0926FF3F28B1121C0023369E /* NewsAppApp.swift in Sources */,
 			);
