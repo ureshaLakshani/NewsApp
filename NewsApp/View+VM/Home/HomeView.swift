@@ -78,6 +78,12 @@ struct HomeView: View {
                     }
                 }
             }
+            .background(
+                NavigationLink (
+                    destination: NewsDeatilView(),
+                    isActive: $isActiveNewsDetailView,
+                    label: {})
+            )
             
             //MARK: - TOP NEWS
             HStack{
