@@ -11,6 +11,7 @@ struct SearchView: View {
     
     // MARK: - PROPERTIES
     @State var searchText : String = ""
+    @State var isShowFilerPanel : Bool = false
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     
     // MARK: - BODY
@@ -53,6 +54,7 @@ struct SearchView: View {
                     
                     //MARK: Filter Button
                     Button {
+                        isShowFilerPanel.toggle()
                     } label: {
                         Image("filter")
                     }
@@ -73,7 +75,14 @@ struct SearchView: View {
             .navigationBarHidden(true)
             .padding(.horizontal, 16)
             .ignoresSafeArea(.all, edges: .bottom)
-            
+           
+            if isShowFilerPanel{
+                withAnimation {
+                    FilterView(){
+                        isShowFilerPanel.toggle()
+                    }
+                }
+            }
         }
     }
 }
