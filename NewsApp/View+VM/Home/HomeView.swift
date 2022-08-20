@@ -13,6 +13,8 @@ struct HomeView: View {
     @State var searchText : String = ""
     @State var isActiveSearchView : Bool = false
     @State var isActiveNewsDetailView : Bool = false
+    @State var isActiveBreakingNewsSerachView : Bool = false
+    @State var isActiveTopNews : Bool = false
     @StateObject var vm = HomeVM()
 
     // MARK: - BODY
@@ -34,7 +36,7 @@ struct HomeView: View {
                     }
                     .background(
                         NavigationLink (
-                            destination: SearchView(),
+                            destination: SearchView(vm: SearchVM(searchText: searchText, isHideCountryNCategorySection: true)),
                             isActive: $isActiveSearchView,
                             label: {})
                     )
@@ -56,7 +58,7 @@ struct HomeView: View {
                 Spacer()
                 
                 Button {
-                    
+                    isActiveBreakingNewsSerachView.toggle()
                 } label: {
                     HStack(spacing: 16){
                         Text("See All")
@@ -65,6 +67,12 @@ struct HomeView: View {
                             .frame(width: 10, height: 12)
                     }
                 }
+                .background(
+                    NavigationLink (
+                        destination: SearchView(vm: SearchVM(searchText: "", isHideCountryNCategorySection: false, useFor: .breakingNews)),
+                        isActive: $isActiveBreakingNewsSerachView,
+                        label: {})
+                )
             }
             .padding(.top, 24)
             .padding(.bottom, 16)
@@ -94,7 +102,7 @@ struct HomeView: View {
                 Spacer()
                 
                 Button {
-                    
+                    isActiveTopNews.toggle()
                 } label: {
                     HStack(spacing: 16){
                         Text("See All")
@@ -103,6 +111,12 @@ struct HomeView: View {
                             .frame(width: 10, height: 12)
                     }
                 }
+                .background(
+                    NavigationLink (
+                        destination: SearchView(vm: SearchVM(searchText: "politics", isHideCountryNCategorySection: true, useFor: .topNews)),
+                        isActive: $isActiveTopNews,
+                        label: {})
+                )
 
             }
             .padding(.top, 24)

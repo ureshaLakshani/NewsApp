@@ -10,9 +10,10 @@ import SwiftUI
 struct SearchView: View {
     
     // MARK: - PROPERTIES
-    @State var searchText : String = ""
     @State var isShowFilerPanel : Bool = false
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    @StateObject var vm : SearchVM
+    @State var isActiveNewsDetailView : Bool = false
     
     // MARK: - BODY
     var body: some View {
@@ -35,11 +36,16 @@ struct SearchView: View {
                     //MARK: Search Bar
                     HStack(spacing: 0){
                         
-                        TextField("Dogecoin to the Moon...", text: $searchText)
+                        TextField("Search", text: $vm.searchText)
                             .font(.custom(.NunitoSemibold, 12))
                         
                         Button {
-                            
+                            self.vm.searchResult = []
+                            if self.vm.useFor == .breakingNews{
+                                vm.getAllBreakingNews()
+                            }else{
+                                vm.findContent()
+                            }
                         } label: {
                             Image("search")
                         }
@@ -63,12 +69,33 @@ struct SearchView: View {
                 
                 //MARK: - NEWS Content
                 ScrollView(.vertical, showsIndicators: false){
-                    VStack{
-                        ForEach(1...10, id: \.self){ _ in
-                            TopNewsCardView()
+                    LazyVStack{
+                        ForEach(vm.searchResult, id: \.id){ article in
+                            TopNewsCardView(article: article)
+                                .onAppear {
+                                    // Pagination Handle
+                                    if vm.searchResult.count < vm.totalResult{
+                                        vm.page += 1
+                                        if self.vm.useFor == .breakingNews{
+                                            vm.getAllBreakingNews()
+                                        }else{
+                                            vm.findContent()
+                                        }
+                                    }
+                                }
+                                .onTapGesture {
+                                    vm.selectedArticle = article
+                                    isActiveNewsDetailView.toggle()
+                                }
                         }
                     }
                 }
+                .background(
+                    NavigationLink (
+                        destination: NewsDeatilView(article: vm.selectedArticle),
+                        isActive: $isActiveNewsDetailView,
+                        label: {})
+                )
                 
                 Spacer()
             }
@@ -90,6 +117,6 @@ struct SearchView: View {
 // MARK: - PREVIEW
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView(vm: SearchVM())
     }
 }

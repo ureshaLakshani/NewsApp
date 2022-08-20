@@ -14,6 +14,7 @@
 		099CC2AD28B188620049BC40 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2AC28B188620049BC40 /* Reachability.swift */; };
 		099CC2AF28B18A170049BC40 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2AE28B18A170049BC40 /* HomeVM.swift */; };
 		099CC2B328B190890049BC40 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B228B190890049BC40 /* Helper.swift */; };
+		099CC2B528B197D80049BC40 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B428B197D80049BC40 /* SearchVM.swift */; };
 		09E917CB28B11854001EF6CB /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C428B11853001EF6CB /* Nunito-Bold.ttf */; };
 		09E917CC28B11854001EF6CB /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C528B11853001EF6CB /* Nunito-Light.ttf */; };
 		09E917CD28B11854001EF6CB /* NewYorkSmall-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C628B11853001EF6CB /* NewYorkSmall-Bold.otf */; };
@@ -47,6 +48,7 @@
 		099CC2AC28B188620049BC40 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		099CC2AE28B18A170049BC40 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		099CC2B228B190890049BC40 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		099CC2B428B197D80049BC40 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 		09E917C428B11853001EF6CB /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		09E917C528B11853001EF6CB /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		09E917C628B11853001EF6CB /* NewYorkSmall-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-Bold.otf"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				09E917E328B14973001EF6CB /* SearchView.swift */,
+				099CC2B428B197D80049BC40 /* SearchVM.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				099CC2AF28B18A170049BC40 /* HomeVM.swift in Sources */,
 				09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */,
 				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
+				099CC2B528B197D80049BC40 /* SearchVM.swift in Sources */,
 				09E917E928B15313001EF6CB /* FilterVM.swift in Sources */,
 				09E917F628B17F28001EF6CB /* NewsResponse.swift in Sources */,
 				09E917F028B163E0001EF6CB /* NewsDeatilView.swift in Sources */,
