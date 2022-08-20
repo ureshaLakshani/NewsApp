@@ -13,7 +13,8 @@ struct HomeView: View {
     @State var searchText : String = ""
     @State var isActiveSearchView : Bool = false
     @State var isActiveNewsDetailView : Bool = false
-    
+    @StateObject var vm = HomeVM()
+
     // MARK: - BODY
     var body: some View {
         VStack(spacing: 0) {
@@ -70,9 +71,10 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
-                    ForEach(1...10, id: \.self){_ in
-                        BreakingNewsCardView()
+                    ForEach(vm.breakingNews, id: \.id){ article in
+                        BreakingNewsCardView(article: article)
                             .onTapGesture {
+                                vm.selectedArticle = article
                                 isActiveNewsDetailView.toggle()
                             }
                     }
@@ -80,7 +82,7 @@ struct HomeView: View {
             }
             .background(
                 NavigationLink (
-                    destination: NewsDeatilView(),
+                    destination: NewsDeatilView(article: vm.selectedArticle),
                     isActive: $isActiveNewsDetailView,
                     label: {})
             )
@@ -108,8 +110,12 @@ struct HomeView: View {
             
             ScrollView(.vertical, showsIndicators: false){
                 VStack{
-                    ForEach(1...10, id: \.self){_ in
-                        TopNewsCardView()
+                    ForEach(vm.topNews, id: \.id){ article in
+                        TopNewsCardView(article: article)
+                            .onTapGesture {
+                                vm.selectedArticle = article
+                                isActiveNewsDetailView.toggle()
+                            }
                     }
                 }
             }
@@ -120,7 +126,10 @@ struct HomeView: View {
         .padding(.horizontal, 15)
         .padding(.top, 16)
         .ignoresSafeArea(.all, edges: .bottom)
-        
+        .onAppear {
+            vm.getBreakingNews()
+            vm.getTopNews()
+        }
     }
 }
 

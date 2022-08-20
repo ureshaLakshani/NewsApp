@@ -11,6 +11,9 @@
 		0926FF4128B1121C0023369E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926FF4028B1121C0023369E /* ContentView.swift */; };
 		0926FF4328B112250023369E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0926FF4228B112250023369E /* Assets.xcassets */; };
 		0926FF4628B112250023369E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0926FF4528B112250023369E /* Preview Assets.xcassets */; };
+		099CC2AD28B188620049BC40 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2AC28B188620049BC40 /* Reachability.swift */; };
+		099CC2AF28B18A170049BC40 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2AE28B18A170049BC40 /* HomeVM.swift */; };
+		099CC2B328B190890049BC40 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B228B190890049BC40 /* Helper.swift */; };
 		09E917CB28B11854001EF6CB /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C428B11853001EF6CB /* Nunito-Bold.ttf */; };
 		09E917CC28B11854001EF6CB /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C528B11853001EF6CB /* Nunito-Light.ttf */; };
 		09E917CD28B11854001EF6CB /* NewYorkSmall-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C628B11853001EF6CB /* NewYorkSmall-Bold.otf */; };
@@ -41,6 +44,9 @@
 		0926FF4028B1121C0023369E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0926FF4228B112250023369E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0926FF4528B112250023369E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		099CC2AC28B188620049BC40 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		099CC2AE28B18A170049BC40 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		099CC2B228B190890049BC40 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		09E917C428B11853001EF6CB /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		09E917C528B11853001EF6CB /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		09E917C628B11853001EF6CB /* NewYorkSmall-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-Bold.otf"; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 				09E917C328B117B1001EF6CB /* Fonts */,
 				09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */,
 				09E917F828B17FD6001EF6CB /* Extentions.swift */,
+				099CC2AC28B188620049BC40 /* Reachability.swift */,
+				099CC2B228B190890049BC40 /* Helper.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				09E917D728B12079001EF6CB /* HomeView.swift */,
+				099CC2AE28B18A170049BC40 /* HomeVM.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -233,7 +242,6 @@
 				EFBA619C596A98529D7C6B36 /* Pods-NewsApp.debug.xcconfig */,
 				A03558404299B69FCD77359A /* Pods-NewsApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -372,6 +380,8 @@
 				09E917F928B17FD6001EF6CB /* Extentions.swift in Sources */,
 				09E917E028B1302F001EF6CB /* TopNewsCardView.swift in Sources */,
 				09E917F328B17D9F001EF6CB /* NetworkManager.swift in Sources */,
+				099CC2B328B190890049BC40 /* Helper.swift in Sources */,
+				099CC2AF28B18A170049BC40 /* HomeVM.swift in Sources */,
 				09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */,
 				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
 				09E917E928B15313001EF6CB /* FilterVM.swift in Sources */,
@@ -381,6 +391,7 @@
 				09E917E728B14C62001EF6CB /* FilterView.swift in Sources */,
 				0926FF4128B1121C0023369E /* ContentView.swift in Sources */,
 				0926FF3F28B1121C0023369E /* NewsAppApp.swift in Sources */,
+				099CC2AD28B188620049BC40 /* Reachability.swift in Sources */,
 				09E917DE28B12B14001EF6CB /* BreakingNewsCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

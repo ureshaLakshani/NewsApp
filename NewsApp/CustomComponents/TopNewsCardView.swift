@@ -6,18 +6,33 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct TopNewsCardView: View {
     
-    // MARK: - BODY
+    // MARK: - Variables
+    var article : Article?
+
+    // MARK: - Body
     var body: some View {
         ZStack{
             Color.black
             
+            WebImage(url: URL(string: article?.urlToImage ?? ""))
+                .resizable()
+                .placeholder {
+                    Rectangle().foregroundColor(.black)
+                }
+                .indicator(.activity)
+                .frame(width: UIScreen.main.bounds.width - 32, height: 128)
+                .scaledToFill()
+                .overlay(
+                    LinearGradient(gradient: Gradient(colors: [.black.opacity(0.3), .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
+                )
+            
             VStack{
-                
                 HStack{
-                    Text("5 things to know about the 'conundrum' of lupus 5 things to know about the 'conundrum' of lupus")
+                    Text(article?.title ?? "N/A")
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(.white)
@@ -31,11 +46,11 @@ struct TopNewsCardView: View {
                 Spacer()
                 
                 HStack{
-                    Text("Matt Villano")
+                    Text(article?.author ?? "Unknown")
                         .foregroundColor(.white)
                         .font(.custom(.NunitoBold, 12))
                     Spacer()
-                    Text("Sunday, 9 May 2021")
+                    Text(Helpers.parseApiDateString(article?.publishedAt ?? "", format: .EEEEDMMMYYYY))
                         .foregroundColor(.white)
                         .font(.custom(.NunitoBold, 12))
                 }
@@ -49,7 +64,6 @@ struct TopNewsCardView: View {
     }
 }
 
-// MARK: - PREVIEW
 struct TopNewsCardView_Previews: PreviewProvider {
     static var previews: some View {
         TopNewsCardView()

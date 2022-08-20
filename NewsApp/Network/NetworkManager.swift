@@ -13,7 +13,7 @@ class NetworkManager{
     public static let shared  = NetworkManager()
     private let session = URLSession.shared
     private let baseURL = "https://newsapi.org/v2"
-    private let apiKey = "0b3c6daeaf5a48a6890d0e58d20729d7"
+    private let apiKey = "dcac3d4888e04357a5a49748271d68f0"
 
     private init(){}
     
@@ -43,8 +43,8 @@ class NetworkManager{
             }
 
             do{
-                /// get PlanetInfo data after decode from json to PlanetInfo object
-                /// Return :    PlanetInfo object
+                /// get NewsResponse data after decode from json to NewsResponse object
+                /// Return :   NewsResponse object
                 let decoder = JSONDecoder()
                 let response = try decoder.decode(T.self,
                                                         from : resposeData)

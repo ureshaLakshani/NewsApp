@@ -6,17 +6,33 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct BreakingNewsCardView: View {
     
+    //MARK: - Variables
+    var article : Article?
+
     // MARK: - BODY
     var body: some View {
         ZStack {
             Color.black
             
+            WebImage(url: URL(string: article?.urlToImage ?? ""))
+                .resizable()
+                .placeholder {
+                    Rectangle().foregroundColor(.black)
+                }
+                .indicator(.activity)
+                .frame(width: 321, height: 240)
+                .scaledToFill()
+                .overlay(
+                    LinearGradient(gradient: Gradient(colors: [.black.opacity(0.2), .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
+                )
+            
             VStack(spacing: 0){
                 HStack {
-                    Text("by Ryan Browne")
+                    Text("by \(article?.author ?? "unknown")")
                         .foregroundColor(.white)
                         .font(.custom(.NunitoExtraBold, 10))
                     Spacer()
@@ -24,7 +40,7 @@ struct BreakingNewsCardView: View {
                 .padding(.top, 80)
                 
                 HStack{
-                    Text("Crypto investors should be prepared to lose all their money, BOE governor says")
+                    Text(article?.title ?? "N/A")
                         .lineLimit(3)
                         .foregroundColor(.white)
                         .font(.custom(.NunitoBold, 20))
@@ -34,7 +50,7 @@ struct BreakingNewsCardView: View {
                 Spacer()
                 
                 HStack{
-                    Text("“I’m going to say this very bluntly again,” he added. “Buy them only if you’re prepared to lose all your money.”")
+                    Text(article?.articleDescription ?? "N/A")
                         .lineLimit(2)
                         .foregroundColor(.white)
                         .font(.custom(.NunitoRegular, 10))

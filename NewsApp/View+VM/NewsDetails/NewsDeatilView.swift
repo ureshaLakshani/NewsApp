@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct NewsDeatilView: View {
     
     // MARK: - PROPERTIES
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-    
+    var article : Article?
+
     // MARK: - BODY
     var body: some View {
         
@@ -37,9 +39,18 @@ struct NewsDeatilView: View {
             
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 0){
-                    Image("Rectangle 60")
+                    
+                    WebImage(url: URL(string: article?.urlToImage ?? ""))
                         .resizable()
-                        .frame(height: 400)
+                        .placeholder {
+                            Rectangle().foregroundColor(.black)
+                        }
+                        .indicator(.activity)
+                        .frame(width: UIScreen.main.bounds.width, height: 400)
+                        .scaledToFill()
+                        .overlay(
+                            LinearGradient(gradient: Gradient(colors: [.black.opacity(0.2), .black.opacity(0.7)]), startPoint: .top, endPoint: .bottom)
+                        )
                     
                     VStack{
                         HStack{
@@ -50,12 +61,12 @@ struct NewsDeatilView: View {
                             ZStack{
                                 HStack{
                                     VStack(alignment: .leading, spacing: 8){
-                                        Text("Sunday, 9 May 2021")
+                                        Text(Helpers.parseApiDateString(article?.publishedAt ?? "", format: .EEEEDMMMYYYY))
                                             .font(.custom(.NunitoSemibold, 12))
-                                        Text("Crypto investors should be prepared to lose all their money, BOE governor says")
+                                        Text(article?.title ?? "N/A")
                                             .lineLimit(3)
                                             .font(.custom(.NunitoBold, 16))
-                                        Text("Published by Ryan Browne")
+                                        Text("Published by \(article?.author ?? "Unknown")")
                                             .font(.custom(.NunitoExtraBold, 10))
                                     }
                                     .padding()
@@ -70,7 +81,7 @@ struct NewsDeatilView: View {
                             
                         )
                         
-                        Text("s “have no intrinsic value” and people who invest in them should be prepared toes “have no intrinsic value” and people who invest in them should be prepared to lose all their money, Bank of England Governor Andrew Bailey said.Cryptocurrencies “have no intrinsic value” and people who invest in them should be prepared to lose all their money, Bank of England Governor Andrew Bailey said. s “have no intrinsic value” and people who invest in them should be prepared toes “have no intrinsic value” and people who invest in them should be prepared to lose all their money, Bank of England Governor Andrew Bailey said.Cryptocurrencies “have no intrinsic value” and people who invest in them should be prepared to lose all their money, Bank of England Governor Andrew Bailey said.")
+                        Text(article?.content ?? "N/A")
                             .foregroundColor(.black)
                             .font(.custom(.NunitoRegular, 14))
                             .padding(.top, 80)
