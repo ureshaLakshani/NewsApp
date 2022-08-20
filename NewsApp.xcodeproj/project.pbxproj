@@ -29,6 +29,9 @@
 		09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */; };
 		09E917ED28B161E1001EF6CB /* FilterContentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917EC28B161E1001EF6CB /* FilterContentCardView.swift */; };
 		09E917F028B163E0001EF6CB /* NewsDeatilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917EF28B163E0001EF6CB /* NewsDeatilView.swift */; };
+		09E917F328B17D9F001EF6CB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917F228B17D9F001EF6CB /* NetworkManager.swift */; };
+		09E917F628B17F28001EF6CB /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917F528B17F28001EF6CB /* NewsResponse.swift */; };
+		09E917F928B17FD6001EF6CB /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917F828B17FD6001EF6CB /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		09E917EC28B161E1001EF6CB /* FilterContentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContentCardView.swift; sourceTree = "<group>"; };
 		09E917EF28B163E0001EF6CB /* NewsDeatilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDeatilView.swift; sourceTree = "<group>"; };
+		09E917F228B17D9F001EF6CB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		09E917F528B17F28001EF6CB /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		09E917F828B17FD6001EF6CB /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +95,11 @@
 			isa = PBXGroup;
 			children = (
 				09E917C128B116C9001EF6CB /* App */,
-				09E917C228B11797001EF6CB /* Util */,
+				09E917C228B11797001EF6CB /* Utilites */,
+				09E917F128B17D83001EF6CB /* Network */,
 				09E917DC28B12AE0001EF6CB /* CustomComponents */,
 				09E917C028B1168C001EF6CB /* View+VM */,
+				09E917F428B17F0C001EF6CB /* Models */,
 				0926FF4428B112250023369E /* Preview Content */,
 			);
 			path = NewsApp;
@@ -120,20 +128,21 @@
 			isa = PBXGroup;
 			children = (
 				09E917D428B11926001EF6CB /* Info.plist */,
+				0926FF4228B112250023369E /* Assets.xcassets */,
 				0926FF4028B1121C0023369E /* ContentView.swift */,
 				0926FF3E28B1121C0023369E /* NewsAppApp.swift */,
-				0926FF4228B112250023369E /* Assets.xcassets */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		09E917C228B11797001EF6CB /* Util */ = {
+		09E917C228B11797001EF6CB /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
 				09E917C328B117B1001EF6CB /* Fonts */,
 				09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */,
+				09E917F828B17FD6001EF6CB /* Extentions.swift */,
 			);
-			path = Util;
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 		09E917C328B117B1001EF6CB /* Fonts */ = {
@@ -193,6 +202,22 @@
 				09E917EF28B163E0001EF6CB /* NewsDeatilView.swift */,
 			);
 			path = NewsDetails;
+			sourceTree = "<group>";
+		};
+		09E917F128B17D83001EF6CB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				09E917F228B17D9F001EF6CB /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		09E917F428B17F0C001EF6CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09E917F528B17F28001EF6CB /* NewsResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,10 +300,13 @@
 			files = (
 				09E917D628B11B10001EF6CB /* NewsAppFont.swift in Sources */,
 				09E917ED28B161E1001EF6CB /* FilterContentCardView.swift in Sources */,
+				09E917F928B17FD6001EF6CB /* Extentions.swift in Sources */,
 				09E917E028B1302F001EF6CB /* TopNewsCardView.swift in Sources */,
+				09E917F328B17D9F001EF6CB /* NetworkManager.swift in Sources */,
 				09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */,
 				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
 				09E917E928B15313001EF6CB /* FilterVM.swift in Sources */,
+				09E917F628B17F28001EF6CB /* NewsResponse.swift in Sources */,
 				09E917F028B163E0001EF6CB /* NewsDeatilView.swift in Sources */,
 				09E917E428B14973001EF6CB /* SearchView.swift in Sources */,
 				09E917E728B14C62001EF6CB /* FilterView.swift in Sources */,
