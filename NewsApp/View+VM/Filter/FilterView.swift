@@ -18,8 +18,8 @@ struct FilterView: View {
     // MARK: - BODY
     var body: some View {
         ZStack {
-            Color.white
-            
+            Color.black.opacity(0.5)
+
             VStack {
                 Spacer()
                 
@@ -132,6 +132,10 @@ struct FilterView: View {
                 }
                 .padding(.top)
                 .padding(.horizontal, 15)
+                .background(
+                   RoundedCornersShape(corners: [.topLeft, .topRight], radius: 15)
+                    .fill(Color.white)
+                )
                 
             }
         }

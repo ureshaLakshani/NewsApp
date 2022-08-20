@@ -26,6 +26,7 @@
 		09E917E428B14973001EF6CB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917E328B14973001EF6CB /* SearchView.swift */; };
 		09E917E728B14C62001EF6CB /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917E628B14C62001EF6CB /* FilterView.swift */; };
 		09E917E928B15313001EF6CB /* FilterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917E828B15313001EF6CB /* FilterVM.swift */; };
+		09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		09E917E328B14973001EF6CB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		09E917E628B14C62001EF6CB /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		09E917E828B15313001EF6CB /* FilterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVM.swift; sourceTree = "<group>"; };
+		09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				09E917C328B117B1001EF6CB /* Fonts */,
+				09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				09E917D628B11B10001EF6CB /* NewsAppFont.swift in Sources */,
 				09E917E028B1302F001EF6CB /* TopNewsCardView.swift in Sources */,
+				09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */,
 				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
 				09E917E928B15313001EF6CB /* FilterVM.swift in Sources */,
 				09E917E428B14973001EF6CB /* SearchView.swift in Sources */,
