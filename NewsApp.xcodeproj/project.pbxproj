@@ -15,6 +15,7 @@
 		099CC2AF28B18A170049BC40 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2AE28B18A170049BC40 /* HomeVM.swift */; };
 		099CC2B328B190890049BC40 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B228B190890049BC40 /* Helper.swift */; };
 		099CC2B528B197D80049BC40 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B428B197D80049BC40 /* SearchVM.swift */; };
+		099CC2B728B1A2AF0049BC40 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B628B1A2AF0049BC40 /* Filter.swift */; };
 		09E917CB28B11854001EF6CB /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C428B11853001EF6CB /* Nunito-Bold.ttf */; };
 		09E917CC28B11854001EF6CB /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C528B11853001EF6CB /* Nunito-Light.ttf */; };
 		09E917CD28B11854001EF6CB /* NewYorkSmall-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C628B11853001EF6CB /* NewYorkSmall-Bold.otf */; };
@@ -49,6 +50,7 @@
 		099CC2AE28B18A170049BC40 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		099CC2B228B190890049BC40 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		099CC2B428B197D80049BC40 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
+		099CC2B628B1A2AF0049BC40 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		09E917C428B11853001EF6CB /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		09E917C528B11853001EF6CB /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		09E917C628B11853001EF6CB /* NewYorkSmall-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-Bold.otf"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				09E917F528B17F28001EF6CB /* NewsResponse.swift */,
+				099CC2B628B1A2AF0049BC40 /* Filter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E917D628B11B10001EF6CB /* NewsAppFont.swift in Sources */,
+				099CC2B728B1A2AF0049BC40 /* Filter.swift in Sources */,
 				09E917ED28B161E1001EF6CB /* FilterContentCardView.swift in Sources */,
 				09E917F928B17FD6001EF6CB /* Extentions.swift in Sources */,
 				09E917E028B1302F001EF6CB /* TopNewsCardView.swift in Sources */,

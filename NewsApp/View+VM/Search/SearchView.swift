@@ -105,8 +105,21 @@ struct SearchView: View {
            
             if isShowFilerPanel{
                 withAnimation {
-                    FilterView(){
+                    FilterView(vm: FilterVM(isHideCountryNCategorySection: vm.isHideCountryNCategorySection)) {
                         isShowFilerPanel.toggle()
+                    } selectedFilters: { country, langugae,category in
+                        isShowFilerPanel.toggle()
+                        vm.selectedCountry = country
+                        vm.selectedLanguage = langugae
+                        vm.selectedCategory = category
+                        vm.page = 1
+                        vm.searchResult = []
+                        
+                        if self.vm.useFor == .breakingNews{
+                            vm.getAllBreakingNews()
+                        }else{
+                            vm.findContent()
+                        }
                     }
                 }
             }
@@ -114,7 +127,6 @@ struct SearchView: View {
     }
 }
 
-// MARK: - PREVIEW
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView(vm: SearchVM())

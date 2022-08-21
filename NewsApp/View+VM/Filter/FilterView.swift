@@ -14,7 +14,8 @@ struct FilterView: View {
     let columnsForCategory = [GridItem(.adaptive(minimum: 100))]
     let columnsForCountriesNLanguage = [GridItem(.adaptive(minimum: 50))]
     var cancelAction: (() -> ())?
-    
+    var selectedFilters : ((_ country: String, _ langugae: String, _ category: String) -> ())?
+
     // MARK: - BODY
     var body: some View {
         ZStack {
@@ -48,35 +49,43 @@ struct FilterView: View {
                     }
                     
                     //MARK: - Category
-                    HStack{
-                        Text("Category")
-                            .font(.custom(.NunitoSemibold, 14))
-                        Spacer()
-                    }
-                    .padding(.top, 24)
-                    .padding(.bottom, 8)
-                    
-                    LazyVGrid(columns: columnsForCategory, alignment: .leading, spacing: 5) {
-                        ForEach(vm.categories, id: \.id) { item in
-                            FilterContentCardView(filter: item)
+                    if !vm.isHideCountryNCategorySection{
+                        HStack{
+                            Text("Category")
+                                .font(.custom(.NunitoSemibold, 14))
+                            Spacer()
+                        }
+                        .padding(.top, 24)
+                        .padding(.bottom, 8)
+                        
+                        LazyVGrid(columns: columnsForCategory, alignment: .leading, spacing: 5) {
+                            ForEach(vm.categories, id: \.id) { item in
+                                FilterContentCardView(filter: item){
+                                    vm.selectCategory(filter: item)
+                                }
+                            }
                         }
                     }
                     
                     //MARK: - Country
-                    HStack{
-                        Text("Country")
-                            .font(.custom(.NunitoSemibold, 14))
-                        Spacer()
-                    }
-                    .padding(.top, 24)
-                    .padding(.bottom, 8)
-                    
-                    LazyVGrid(columns: columnsForCountriesNLanguage, alignment: .leading, spacing: 5) {
-                        ForEach(vm.countries, id: \.id) { item in
-                            FilterContentCardView(filter:  item)
+                    if !vm.isHideCountryNCategorySection{
+                        HStack{
+                            Text("Country")
+                                .font(.custom(.NunitoSemibold, 14))
+                            Spacer()
+                        }
+                        .padding(.top, 24)
+                        .padding(.bottom, 8)
+                        
+                        LazyVGrid(columns: columnsForCountriesNLanguage, alignment: .leading, spacing: 5) {
+                            ForEach(vm.countries, id: \.id) { item in
+                                FilterContentCardView(filter: item){
+                                    vm.selecCountry(filter: item)
+                                }
+                            }
                         }
                     }
-                
+                    
                     //MARK: - Language
                     HStack{
                         Text("Language")
@@ -88,7 +97,9 @@ struct FilterView: View {
                     
                     LazyVGrid(columns: columnsForCountriesNLanguage, alignment: .leading, spacing: 5) {
                         ForEach(vm.language, id: \.id) { item in
-                            FilterContentCardView(filter:  item)
+                            FilterContentCardView(filter: item){
+                                vm.selectLanguage(filter: item)
+                            }
                         }
                     }
                     .padding(.bottom, 32)
@@ -96,7 +107,7 @@ struct FilterView: View {
                     
                     HStack{
                         Button {
-                            
+                            vm.resetFilters()
                         } label: {
                             HStack{
                                 Spacer()
@@ -115,7 +126,7 @@ struct FilterView: View {
                         }
                         
                         Button {
-                            
+                            selectedFilters?(vm.selectedCountry, vm.selectedLanguage, vm.selectedCategory)
                         } label: {
                             HStack{
                                 Spacer()
@@ -145,7 +156,6 @@ struct FilterView: View {
     }
 }
 
-// MARK: - PREVIEW
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
         FilterView()

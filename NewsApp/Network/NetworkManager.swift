@@ -13,7 +13,7 @@ class NetworkManager{
     public static let shared  = NetworkManager()
     private let session = URLSession.shared
     private let baseURL = "https://newsapi.org/v2"
-    private let apiKey = "dcac3d4888e04357a5a49748271d68f0"
+    private let apiKey = "a4350b37c0e64e8ebeafb5a544a45267"
 
     private init(){}
     
