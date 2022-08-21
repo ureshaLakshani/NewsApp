@@ -105,7 +105,7 @@ struct SearchView: View {
            
             if isShowFilerPanel{
                 withAnimation {
-                    FilterView(vm: FilterVM(isHideCountryNCategorySection: vm.isHideCountryNCategorySection)) {
+                    FilterView(vm: FilterVM(isHideCountryNCategorySection: vm.isHideCountryNCategorySection, selectedCountry: vm.selectedCountry, selectedLanguage:vm.selectedLanguage, selectedCategory: vm.selectedCategory)) {
                         isShowFilerPanel.toggle()
                     } selectedFilters: { country, langugae,category in
                         isShowFilerPanel.toggle()
