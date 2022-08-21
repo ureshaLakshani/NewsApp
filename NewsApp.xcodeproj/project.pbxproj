@@ -16,6 +16,8 @@
 		099CC2B328B190890049BC40 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B228B190890049BC40 /* Helper.swift */; };
 		099CC2B528B197D80049BC40 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B428B197D80049BC40 /* SearchVM.swift */; };
 		099CC2B728B1A2AF0049BC40 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B628B1A2AF0049BC40 /* Filter.swift */; };
+		099CC2BB28B1C2240049BC40 /* UserDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2B928B1C2240049BC40 /* UserDB.xcdatamodeld */; };
+		099CC2BD28B1C2AB0049BC40 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC2BC28B1C2AB0049BC40 /* PersistenceController.swift */; };
 		09E917CB28B11854001EF6CB /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C428B11853001EF6CB /* Nunito-Bold.ttf */; };
 		09E917CC28B11854001EF6CB /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C528B11853001EF6CB /* Nunito-Light.ttf */; };
 		09E917CD28B11854001EF6CB /* NewYorkSmall-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09E917C628B11853001EF6CB /* NewYorkSmall-Bold.otf */; };
@@ -51,6 +53,8 @@
 		099CC2B228B190890049BC40 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		099CC2B428B197D80049BC40 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 		099CC2B628B1A2AF0049BC40 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		099CC2BA28B1C2240049BC40 /* UserDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserDB.xcdatamodel; sourceTree = "<group>"; };
+		099CC2BC28B1C2AB0049BC40 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		09E917C428B11853001EF6CB /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		09E917C528B11853001EF6CB /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		09E917C628B11853001EF6CB /* NewYorkSmall-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkSmall-Bold.otf"; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		099CC2B828B1C1E00049BC40 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				099CC2B928B1C2240049BC40 /* UserDB.xcdatamodeld */,
+				099CC2BC28B1C2AB0049BC40 /* PersistenceController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		09E917C028B1168C001EF6CB /* View+VM */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +168,7 @@
 		09E917C228B11797001EF6CB /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
+				099CC2B828B1C1E00049BC40 /* CoreData */,
 				09E917C328B117B1001EF6CB /* Fonts */,
 				09E917EA28B1601F001EF6CB /* RoundedCornersShape.swift */,
 				09E917F828B17FD6001EF6CB /* Extentions.swift */,
@@ -388,6 +402,7 @@
 				09E917E028B1302F001EF6CB /* TopNewsCardView.swift in Sources */,
 				09E917F328B17D9F001EF6CB /* NetworkManager.swift in Sources */,
 				099CC2B328B190890049BC40 /* Helper.swift in Sources */,
+				099CC2BB28B1C2240049BC40 /* UserDB.xcdatamodeld in Sources */,
 				099CC2AF28B18A170049BC40 /* HomeVM.swift in Sources */,
 				09E917EB28B1601F001EF6CB /* RoundedCornersShape.swift in Sources */,
 				09E917D828B12079001EF6CB /* HomeView.swift in Sources */,
@@ -395,6 +410,7 @@
 				09E917E928B15313001EF6CB /* FilterVM.swift in Sources */,
 				09E917F628B17F28001EF6CB /* NewsResponse.swift in Sources */,
 				09E917F028B163E0001EF6CB /* NewsDeatilView.swift in Sources */,
+				099CC2BD28B1C2AB0049BC40 /* PersistenceController.swift in Sources */,
 				09E917E428B14973001EF6CB /* SearchView.swift in Sources */,
 				09E917E728B14C62001EF6CB /* FilterView.swift in Sources */,
 				0926FF4128B1121C0023369E /* ContentView.swift in Sources */,
@@ -605,6 +621,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		099CC2B928B1C2240049BC40 /* UserDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				099CC2BA28B1C2240049BC40 /* UserDB.xcdatamodel */,
+			);
+			currentVersion = 099CC2BA28B1C2240049BC40 /* UserDB.xcdatamodel */;
+			path = UserDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0926FF3328B1121C0023369E /* Project object */;
 }
