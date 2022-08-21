@@ -12,10 +12,7 @@ struct NewsAppApp: App {
     var body: some Scene {
         WindowGroup {
             
-            NavigationView{
-                SignUpView()
-                    
-            }
+            ContentView()
             
         }
     }

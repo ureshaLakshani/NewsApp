@@ -19,7 +19,7 @@ struct ContentView: View {
             if IsAuthenticated(){
                 HomeView()
             }else{
-
+                SignInView()
             }
         }
     }
