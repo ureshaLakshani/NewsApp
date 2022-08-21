@@ -15,8 +15,12 @@ class FilterVM: ObservableObject{
     @Published var selectedCategory : String = ""
     @Published var isHideCountryNCategorySection : Bool = false
     
-    init(isHideCountryNCategorySection: Bool? = false){
+    init(isHideCountryNCategorySection: Bool? = false, selectedCountry : String? = "", selectedLanguage : String? = "", selectedCategory : String? = ""){
         self.isHideCountryNCategorySection = isHideCountryNCategorySection ?? false
+        self.selectedLanguage = selectedLanguage ?? ""
+        self.selectedCountry = selectedCountry ?? ""
+        self.selectedCategory = selectedCategory ?? ""
+        self.setSelectedFilter()
     }
     
     @Published var categories : [Filter] = [
@@ -137,5 +141,27 @@ extension FilterVM{
             categories[index].isSelected = false
         }
     }
+    
+    //Set Selected Filters
+    func setSelectedFilter(){
+        for (index, item) in language.enumerated() {
+            if item.name == selectedLanguage{
+                language[index].isSelected = true
+            }
+        }
+        
+        for (index, item) in categories.enumerated() {
+            if item.name == selectedCategory{
+                categories[index].isSelected = true
+            }
+        }
+        
+        for (index, item) in countries.enumerated() {
+            if item.name == selectedCountry{
+                countries[index].isSelected = true
+            }
+        }
+    }
 }
+
 

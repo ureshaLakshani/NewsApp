@@ -49,6 +49,13 @@ struct HomeView: View {
                         .stroke(.gray.opacity(0.4), lineWidth: 0.5)
                 )
                 
+                //MARK: Logout Button
+                Button {
+                    self.vm.isShowLogOutAlert.toggle()
+                } label: {
+                    Image(systemName: "rectangle.portrait.and.arrow.right.fill")
+                        .foregroundColor(.red)
+                }
             }
             
             //MARK: - Breaking NEWS
@@ -143,6 +150,23 @@ struct HomeView: View {
         .onAppear {
             vm.getBreakingNews()
             vm.getTopNews()
+        }
+        .alert(isPresented: self.$vm.isShowLogOutAlert) {
+            Alert(
+                title: Text("Log Out"),
+                message: Text("Are you sure you want to log out?"),
+                primaryButton: .cancel(Text("Cancel")){
+                    self.vm.isShowLogOutAlert = false
+                },
+                secondaryButton: .destructive(Text("Yes")) {
+                    PersistenceController.shared.deleteUserData()
+                    self.vm.isShowLogOutAlert = false
+                    let contentView = ContentView()
+                    UIApplication.shared.windows
+                        .first { $0.isKeyWindow }?
+                        .rootViewController = UIHostingController(rootView: contentView)
+                }
+            )
         }
     }
 }

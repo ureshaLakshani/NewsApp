@@ -14,7 +14,8 @@ class HomeVM: ObservableObject{
     @Published var isShowAlert = false
     @Published var alertMessage = ""
     @Published var alertTitle = ""
-    
+    @Published var isShowLogOutAlert = false
+
     @Published var breakingNews : [Article] = []
     @Published var topNews : [Article] = []
     @Published var selectedArticle : Article?
