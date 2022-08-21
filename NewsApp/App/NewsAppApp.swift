@@ -13,7 +13,7 @@ struct NewsAppApp: App {
         WindowGroup {
             
             NavigationView{
-                HomeView()
+                SignUpView()
                     
             }
             

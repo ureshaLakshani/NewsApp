@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-          
-            .padding()
-            
+    
+    public func IsAuthenticated() -> Bool {
+        return PersistenceController.shared.loadUserData() != nil
     }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            
+    var body: some View {
+        
+        NavigationView{
+            if IsAuthenticated(){
+                HomeView()
+            }else{
+
+            }
+        }
     }
 }
