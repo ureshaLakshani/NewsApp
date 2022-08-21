@@ -1,12 +1,6 @@
 # NewsApp
 
-##  Description
-
 ### Welcome! 
-
-Please watch the demo video
-
-![demo](https://github.com/ureshaLakshani/Demo/blob/main/ezgif.com-gif-maker.gif)
 
 ##  Requirements
 
