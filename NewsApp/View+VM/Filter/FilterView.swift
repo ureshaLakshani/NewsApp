@@ -104,10 +104,10 @@ struct FilterView: View {
                     }
                     .padding(.bottom, 32)
                     
-                    
                     HStack{
                         Button {
                             vm.resetFilters()
+                            selectedFilters?("", "", "")
                         } label: {
                             HStack{
                                 Spacer()
@@ -158,6 +158,6 @@ struct FilterView: View {
 
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterView()
+        FilterView(vm: FilterVM(isHideCountryNCategorySection: false))
     }
 }
